@@ -52,7 +52,7 @@ This BookStore API is a RESTful web service designed for managing users and book
    }`
 
 6. Kickstart the server:
-   npm start
+   `npm start`
 
 The server will start on `http://localhost:3000`.
 
