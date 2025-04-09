@@ -1,5 +1,5 @@
 {
-  "mongoURI": "mongodb+srv://terminalishere127:hello@cluster0.ezhgpwx.mongodb.net/bookstore?retryWrites=true&w=majority&appName=Cluster0",
+  "mongoURI": "mongodb+srv://ananya1909:V4IUY6x7KCEZKTWq@cluster0.qjvts7o.mongodb.net/zyneticDB?retryWrites=true&w=majority&appName=Cluster0",
   "jwtSecret": "supersecret123",
-  "admin-signup-key": "hello123"
+  "admin-signup-key": "ananya123"
 }
