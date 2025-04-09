@@ -1,4 +1,4 @@
-# BookStore API
+# Zynetic Backend - BookStore API
 
 ## Table of Contents
 
