@@ -147,7 +147,7 @@ The API documentation is available at `http://localhost:3000/api-docs`.
 - **URL:** `/api/books/{bookId}`
 - **Method:** `GET`
 - **Response:**
-- 
+ 
   {
     "title": "Malgudi Days",
     "description": "A collection of short stories",
