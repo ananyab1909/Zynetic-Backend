@@ -6,7 +6,7 @@ const BookSchema = new mongoose.Schema({
     required: true,
     unique: true,
   },
-  description: {
+  desc: {
     type: String,
     required: false,
   },
@@ -24,7 +24,7 @@ const BookSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  author: {
+  authorName: {
     type: String,
     required: true,
   },
@@ -34,7 +34,7 @@ const BookSchema = new mongoose.Schema({
     min: 0,
     max: 5,
   },
-  date: {
+  publishDate: {
     type: Date,
     default: Date.now,
   },
