@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const Book = require("../../models/Book");
-const { check, validationResult } = require("express-validator");
+const { check, val } = require("express-validator");
 const auth = require("../../middleware/auth");
 const User = require("../../models/User");
 
@@ -205,7 +205,7 @@ router.post(
     }),
   ],
   async (req, res) => {
-    const errors = validationResult(req);
+    const errors = val(req);
     if (!errors.isEmpty()) {
       return res.status(401).json({ errors: errors.array() });
     }
