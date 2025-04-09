@@ -48,7 +48,7 @@ BookStore API is a RESTful web service for managing books and users in a booksto
 
    ```bash
    git clone https://github.com/yourusername/Zynetic-Backend.git
-   cd bookstore
+   cd Zynetic-Backend
    ```
 
 2. Install dependencies:
