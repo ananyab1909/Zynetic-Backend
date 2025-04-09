@@ -12,7 +12,7 @@
 
 ## Description
 
-BookStore API is a RESTful web service for managing books and users in a bookstore. It allows users to register, login, and perform CRUD operations on books. The API also supports role-based access control, where only admin users can add, update, or delete books.
+This BookStore API is a RESTful web service designed for managing users and books within a bookstore system. It enables users to register, log in, and view available books. Additionally, the API implements role-based access control, ensuring that only users with admin privileges can create, update, or delete books. Regular users have read-only access, making the system secure and well-structured for managing both users and book inventory.
 
 ## Features
 
@@ -45,47 +45,37 @@ BookStore API is a RESTful web service for managing books and users in a booksto
 ### Installation
 
 1. Clone the repository:
-
-   ```bash
    git clone https://github.com/yourusername/Zynetic-Backend.git
    cd Zynetic-Backend
-   ```
+
 
 2. Install dependencies:
-
-   ```bash
    npm install
-   ```
 
 3. Set up environment variables:
 
-   Create a `default.json` file in the `config` directory with the following content:
+   Create a `default.json` file in the config directory with the following content:
 
-   ```json
    {
      "mongoURI": "your_mongodb_connection_string",
      "jwtSecret": "your_jwt_secret",
      "admin-signup-key": "your_admin_signup_key"
    }
-   ```
+
 
 4. Start the server:
-
-   ```bash
    npm start
-   ```
 
-   The server will start on `http://localhost:3000`.
+
+   __The server will start on `http://localhost:3000`.__
 
 ### API Documentation
 
 The API documentation is available at `http://localhost:3000/api-docs`.
 
-## API Documentation
-
 ### User Routes
 
-#### Register a User
+#### Sign Up - User Registration
 
 - **URL:** `/api/users/register`
 - **Method:** `POST`
@@ -100,33 +90,26 @@ The API documentation is available at `http://localhost:3000/api-docs`.
   ```
 
 - **Response:**
-
-  ```json
   {
     "token": "jwt_token"
   }
-  ```
 
-#### Login a User
+#### Login - Only signed up users
 
 - **URL:** `/api/users/login`
 - **Method:** `POST`
 - **Request Body:**
 
-  ```json
   {
     "email": "john.doe@example.com",
     "password": "password1234"
   }
-  ```
 
 - **Response:**
 
-  ```json
   {
     "token": "jwt_token"
   }
-  ```
 
 ### Book Routes
 
@@ -143,10 +126,10 @@ The API documentation is available at `http://localhost:3000/api-docs`.
 
 - **Response:**
 
-  ```json
   {
     "books": [
-      {
+
+  {
         "title": "Malgudi Days",
         "description": "A collection of short stories",
         "price": 500,
@@ -154,20 +137,19 @@ The API documentation is available at `http://localhost:3000/api-docs`.
         "category": "Fiction",
         "author": "R.K. Narayan",
         "rating": 4.5
-      }
+  }
     ],
     "totalPages": 1,
     "currentPage": 1
   }
-  ```
+
 
 #### Get a Book by ID
 
 - **URL:** `/api/books/{bookId}`
 - **Method:** `GET`
 - **Response:**
-
-  ```json
+- 
   {
     "title": "Malgudi Days",
     "description": "A collection of short stories",
@@ -177,7 +159,6 @@ The API documentation is available at `http://localhost:3000/api-docs`.
     "author": "R.K. Narayan",
     "rating": 4.5
   }
-  ```
 
 #### Create a Book
 
@@ -187,7 +168,6 @@ The API documentation is available at `http://localhost:3000/api-docs`.
   - `x-auth-token`: `jwt_token`
 - **Request Body:**
 
-  ```json
   {
     "title": "Malgudi Days",
     "description": "A collection of short stories",
@@ -197,11 +177,9 @@ The API documentation is available at `http://localhost:3000/api-docs`.
     "author": "R.K. Narayan",
     "rating": 4.5
   }
-  ```
 
 - **Response:**
-
-  ```json
+  
   {
     "newBook": {
       "title": "Malgudi Days",
@@ -213,7 +191,6 @@ The API documentation is available at `http://localhost:3000/api-docs`.
       "rating": 4.5
     }
   }
-  ```
 
 #### Update a Book
 
@@ -223,19 +200,15 @@ The API documentation is available at `http://localhost:3000/api-docs`.
   - `x-auth-token`: `jwt_token`
 - **Request Body:**
 
-  ```json
   {
     "price": 600
   }
-  ```
 
 - **Response:**
 
-  ```json
   {
     "message": "Successfully updated the book"
   }
-  ```
 
 #### Delete a Book
 
@@ -245,32 +218,26 @@ The API documentation is available at `http://localhost:3000/api-docs`.
   - `x-auth-token`: `jwt_token`
 - **Response:**
 
-  ```json
   {
     "message": "Successfully deleted the book"
   }
-  ```
 
 ## Testing
 
-### Running Tests
+### Running Integration and Unit Tests
 
 1. Install development dependencies:
 
-   ```bash
    npm install --save-dev mocha chai chai-http
-   ```
 
 2. Run the tests:
 
-   ```bash
    npm test
-   ```
 
-### Test Files
+### Test Codes
 
-- **User Tests:** `Zynetic-Backend/test/user.js`
-- **Book Tests:** `Zynetic-Backend/test/book.js`
+- **User Tests:** __Zynetic-Backend/test/user.js__
+- **Book Tests:** __Zynetic-Backend/test/book.js__
 
 ## License
 
