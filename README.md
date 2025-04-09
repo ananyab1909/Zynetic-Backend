@@ -70,8 +70,8 @@ The API documentation is available at `http://localhost:3000/api-docs`.
 
   `{
     "name": "John Doe",
-    "email": "john.doe@example.com",
-    "password": "password1234"
+    "email": "mary.jones@domain.com",
+    "password": "secret1234"
   }`
 
 - **Response:**
@@ -85,8 +85,8 @@ The API documentation is available at `http://localhost:3000/api-docs`.
 - **Method:** `POST`
 - **Request Body:**
   `{
-    "email": "john.doe@example.com",
-    "password": "password1234"
+    "email": "mary.jones@domain.com",
+    "password": "secret1234"
   }`
 
 - **Response:**
