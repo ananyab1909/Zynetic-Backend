@@ -97,11 +97,11 @@ const User = require("../../models/User");
 router.get("/", async (req, res) => {
   try {
     const { category, author, rating, page = 1, limit = 10 } = req.query;
-    let filter = { stock: { $gt: 0 } };
+    let filt = { stock: { $gt: 0 } };
 
-    if (category) filter.category = category;
-    if (author) filter.author = author;
-    if (rating) filter.rating = { $gte: rating };
+    if (category) filt.category = category;
+    if (author) filt.author = author;
+    if (rating) filt.rating = { $gte: rating };
 
     const books = await Book.find(filter)
       .limit(parseInt(limit))
