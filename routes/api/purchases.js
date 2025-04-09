@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const { check, validationResult } = require('express-validator');
+const { check, validation } = require('express-validator');
 const auth = require('../../middleware/auth');
 const Purchase = require('../../models/Purchase');
 const Book = require('../../models/Book');
@@ -78,7 +78,7 @@ router.post(
   auth,
   [check('bookId', 'The id provided is not a valid id').isMongoId()],
   async (req, res) => {
-    const errors = validationResult(req);
+    const errors = validation(req);
     if (!errors.isEmpty()) {
       return res.status(400).json({ errors: errors.array() });
     }
