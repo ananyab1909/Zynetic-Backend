@@ -1,3 +1,4 @@
+
 # Zynetic Backend - BookStore API
 
 ## Description
@@ -19,11 +20,11 @@ This BookStore API is a RESTful web service designed for managing users and book
 - MongoDB
 - Mongoose
 - JWT (JSON Web Tokens)
+- Chai
+- Chai-HTTP
 - bcrypt.js
 - Swagger
 - Mocha
-- Chai
-- Chai-HTTP
 
 ### Prerequisites
 
@@ -58,7 +59,7 @@ The server will start on `http://localhost:3000`.
 
 ### API Docs
 
-The API documentation is available at `http://localhost:3000/api-docs`.
+The API documentation is available at `http://localhost:3000/api-docs` done using Swagger.
 
 ### User Routes
 
@@ -69,9 +70,9 @@ The API documentation is available at `http://localhost:3000/api-docs`.
 - **Request Body:**
 
   `{
-    "name": "John Doe",
-    "email": "mary.jones@domain.com",
-    "password": "secret1234"
+    "name": "Ananya Biswas",
+    "email": "ananya.biswas@domain.com",
+    "password": "password123"
   }`
 
 - **Response:**
@@ -85,8 +86,8 @@ The API documentation is available at `http://localhost:3000/api-docs`.
 - **Method:** `POST`
 - **Request Body:**
   `{
-    "email": "mary.jones@domain.com",
-    "password": "secret1234"
+    "email": "ananya.biswas@domain.com",
+    "password": "password123"
   }`
 
 - **Response:**
